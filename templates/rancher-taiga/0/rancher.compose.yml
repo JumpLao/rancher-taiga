@@ -1,0 +1,36 @@
+.catalog:
+ name: "Initial Version"
+ version: "v0.0.1"
+ questions:    
+    - variable: HOSTNAME
+      label: "Vitual host to use"
+      default: "taiga.example.com"
+      type: string
+    - variable: ENABLE_EMAIL
+      label: "Default Virtual Host to use"
+      type: string
+      default: "False"
+    - variable: EMAIL_FROM
+      label: "Default Email from"
+      default: "foo@gmail.com"
+      type: string    
+    - variable: EMAIL_USE_TLS
+      label: "Enable email TLS"
+      default: "True"
+      type: string
+    - variable: EMAIL_HOST
+      label: "Email host"
+      default: "smtp.gmail.com"
+      type: string
+    - variable: EMAIL_PORT
+      label: "Port for email host"
+      default: "587"
+      type: number
+    - variable: EMAIL_USER
+      label: "Email username"
+      default: "foo@gmail.com"
+      type: string
+    - variable: EMAIL_PASS
+      label: "Email password"
+      default: "yourpassword"
+      type: password

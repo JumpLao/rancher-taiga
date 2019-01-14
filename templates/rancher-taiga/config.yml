@@ -1,0 +1,7 @@
+name: rancher-taiga
+description: "Taiga for rancher"
+version: "v0.0.1"
+category: Agile
+maintainer: NattaphatLaoharawee
+license: MIT
+projectURl: "https://github.com/JumpLao/rancher-taiga"
