@@ -1,7 +1,8 @@
-.catalog:
- name: "Initial Version"
- version: "v0.0.1"
- questions:    
+version: '2'
+catalog:
+  name: "Initial Version"
+  version: "v0.0.1"
+  questions:    
     - variable: HOSTNAME
       label: "Vitual host to use"
       default: "taiga.example.com"
