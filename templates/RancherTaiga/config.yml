@@ -1,4 +1,4 @@
-name: rancher-taiga
+name: RancherTaiga
 description: "Taiga for rancher"
 version: "v0.0.1"
 category: Agile
