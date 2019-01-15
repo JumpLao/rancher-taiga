@@ -3,6 +3,8 @@ version: '2'
 services:
   taiga:
     image: jumplao/docker-taiga
+    labels:
+      io.rancher.scheduler.affinity:host_label_soft: taiga=true
     depends_on:
       - postgres
     volumes:
@@ -36,6 +38,8 @@ services:
      - events
   postgres:
     image: postgres
+    labels:
+      io.rancher.scheduler.affinity:host_label_soft: taiga=true
     environment:
       POSTGRES_DB: taigadb
       POSTGRES_PASSWORD: password
@@ -45,13 +49,21 @@ services:
       - taiga-pgdata:/var/lib/postgresql/data
   rabbit:
     image: rabbitmq:3
+    labels:
+      io.rancher.scheduler.affinity:host_label_soft: taiga=true
   redis:
     image: redis:3
+    labels:
+      io.rancher.scheduler.affinity:host_label_soft: taiga=true
   celery:
     image: celery
+    labels:
+      io.rancher.scheduler.affinity:host_label_soft: taiga=true
     links:
      - rabbit
   events:
     image: benhutchins/taiga-events
+    labels:
+      io.rancher.scheduler.affinity:host_label_soft: taiga=true
     links:
      - rabbit
